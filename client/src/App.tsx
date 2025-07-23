@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import beaver from './assets/beaver.svg'
-import type { ApiResponse } from 'shared'
+import type { ApiResponse } from '@repo/shared';
 import './App.css'
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000"
