@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently 'vite' 'tsc --build --pretty --watch' --names 'vite,tsc' --prefix-colors 'green,blue'",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

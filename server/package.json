@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "bun --watch run src/index.ts"
+    "dev": "concurrently 'bun --watch run src/index.ts' 'tsc --watch --pretty' --names 'bun,tsc' --prefix-colors 'magenta,blue'"
   },
   "dependencies": {
     "hono": "^4.7.11",
