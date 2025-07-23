@@ -13,6 +13,7 @@
     "@repo/shared": "workspace:*"
   },
   "devDependencies": {
+    "typescript": "catalog:",
     "@types/bun": "latest"
   }
 }
