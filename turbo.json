@@ -21,9 +21,8 @@
       "env": ["NODE_ENV"]
     },
     "type-check": {
-      "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$"],
-      "outputs": ["dist/**/*.d.ts", ".tsbuildinfo"],
+      "outputs": [".tsbuildinfo"],
       "env": ["NODE_ENV"]
     },
     "test": {

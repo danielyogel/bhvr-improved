@@ -5,7 +5,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch --pretty"
+    "dev": "tsc --watch --pretty",
+    "type-check": "tsc --noEmit --pretty"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
