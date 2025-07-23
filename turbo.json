@@ -7,18 +7,7 @@
                 "^build"
             ],
             "inputs": [
-                "src/**/*.ts",
-                "src/**/*.tsx",
-                "src/**/*.js",
-                "src/**/*.jsx",
-                "src/**/*.json",
-                "tsconfig.json",
-                "tsconfig.*.json",
-                "vite.config.ts",
-                "package.json",
-                "bun.lock",
-                "eslint.config.js",
-                "index.html"
+                "$TURBO_DEFAULT$"
             ],
             "outputs": [
                 "dist/**",
@@ -34,14 +23,7 @@
             "cache": false,
             "persistent": true,
             "inputs": [
-                "src/**/*.ts",
-                "src/**/*.tsx",
-                "src/**/*.js",
-                "src/**/*.jsx",
-                "tsconfig.json",
-                "tsconfig.*.json",
-                "vite.config.ts",
-                "package.json"
+                "$TURBO_DEFAULT$"
             ],
             "env": [
                 "NODE_ENV",
@@ -54,15 +36,7 @@
                 "^build"
             ],
             "inputs": [
-                "src/**/*.ts",
-                "src/**/*.tsx",
-                "src/**/*.js",
-                "src/**/*.jsx",
-                "eslint.config.js",
-                ".eslintrc*",
-                "package.json",
-                "tsconfig.json",
-                "tsconfig.*.json"
+                "$TURBO_DEFAULT$"
             ],
             "outputs": [
                 ".eslintcache"
@@ -76,12 +50,7 @@
                 "^build"
             ],
             "inputs": [
-                "src/**/*.ts",
-                "src/**/*.tsx",
-                "src/**/*.d.ts",
-                "tsconfig.json",
-                "tsconfig.*.json",
-                "package.json"
+                "$TURBO_DEFAULT$"
             ],
             "outputs": [
                 "dist/**/*.d.ts",
@@ -96,25 +65,7 @@
                 "^build"
             ],
             "inputs": [
-                "src/**/*.ts",
-                "src/**/*.tsx",
-                "src/**/*.js",
-                "src/**/*.jsx",
-                "test/**/*.ts",
-                "test/**/*.tsx",
-                "test/**/*.js",
-                "test/**/*.jsx",
-                "__tests__/**/*.ts",
-                "__tests__/**/*.tsx",
-                "**/*.test.ts",
-                "**/*.test.tsx",
-                "**/*.spec.ts",
-                "**/*.spec.tsx",
-                "jest.config.*",
-                "vitest.config.*",
-                "package.json",
-                "tsconfig.json",
-                "tsconfig.*.json"
+                "$TURBO_DEFAULT$"
             ],
             "outputs": [
                 "coverage/**",
