@@ -1,99 +1,48 @@
 {
-    "$schema": "https://turbo.build/schema.json",
-    "ui": "stream",
-    "tasks": {
-        "build": {
-            "dependsOn": [
-                "^build"
-            ],
-            "inputs": [
-                "$TURBO_DEFAULT$"
-            ],
-            "outputs": [
-                "dist/**",
-                "build/**",
-                ".turbo/**"
-            ],
-            "env": [
-                "NODE_ENV",
-                "VITE_*"
-            ]
-        },
-        "dev": {
-            "cache": false,
-            "persistent": true,
-            "inputs": [
-                "$TURBO_DEFAULT$"
-            ],
-            "env": [
-                "NODE_ENV",
-                "PORT",
-                "VITE_*"
-            ]
-        },
-        "lint": {
-            "dependsOn": [
-                "^build"
-            ],
-            "inputs": [
-                "$TURBO_DEFAULT$"
-            ],
-            "outputs": [
-                ".eslintcache"
-            ],
-            "env": [
-                "NODE_ENV"
-            ]
-        },
-        "type-check": {
-            "dependsOn": [
-                "^build"
-            ],
-            "inputs": [
-                "$TURBO_DEFAULT$"
-            ],
-            "outputs": [
-                "dist/**/*.d.ts",
-                ".tsbuildinfo"
-            ],
-            "env": [
-                "NODE_ENV"
-            ]
-        },
-        "test": {
-            "dependsOn": [
-                "^build"
-            ],
-            "inputs": [
-                "$TURBO_DEFAULT$"
-            ],
-            "outputs": [
-                "coverage/**",
-                ".nyc_output/**",
-                "test-results/**"
-            ],
-            "env": [
-                "NODE_ENV",
-                "CI"
-            ]
-        }
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": ["dist/**", "build/**", ".turbo/**"],
+      "env": ["NODE_ENV", "VITE_*"]
     },
-    "globalDependencies": [
-        "**/.env",
-        "**/.env.*",
-        "**/.env.local",
-        "**/.env.*.local",
-        ".gitignore",
-        "turbo.json",
-        "package.json",
-        "bun.lock",
-        "tsconfig.json"
-    ],
-    "globalEnv": [
-        "NODE_ENV",
-        "CI",
-        "TURBO_TOKEN",
-        "TURBO_TEAM",
-        "TURBO_REMOTE_ONLY"
-    ]
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "inputs": ["$TURBO_DEFAULT$"],
+      "env": ["NODE_ENV", "PORT", "VITE_*"]
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": [".eslintcache"],
+      "env": ["NODE_ENV"]
+    },
+    "type-check": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": ["dist/**/*.d.ts", ".tsbuildinfo"],
+      "env": ["NODE_ENV"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$"],
+      "outputs": ["coverage/**", ".nyc_output/**", "test-results/**"],
+      "env": ["NODE_ENV", "CI"]
+    }
+  },
+  "globalDependencies": [
+    "**/.env",
+    "**/.env.*",
+    "**/.env.local",
+    "**/.env.*.local",
+    ".gitignore",
+    "turbo.json",
+    "package.json",
+    "bun.lock",
+    "tsconfig.json"
+  ],
+  "globalEnv": ["NODE_ENV", "CI", "TURBO_TOKEN", "TURBO_TEAM", "TURBO_REMOTE_ONLY"]
 }
