@@ -21,7 +21,7 @@
       "env": ["NODE_ENV"]
     },
     "type-check": {
-      "cache": false,
+      "cache": true,
       "inputs": ["$TURBO_DEFAULT$"],
       "outputs": [".tsbuildinfo"],
       "env": ["NODE_ENV"]
