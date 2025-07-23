@@ -5,7 +5,7 @@
   "author": "Daniel Yogel",
   "license": "MIT",
   "homepage": "https://github.com/danielyogel/bhvr-improved",
-  "packageManager": "bun@1.2.4",
+  "packageManager": "bun@1.2.19",
   "workspaces": [
     "./server",
     "./client",
