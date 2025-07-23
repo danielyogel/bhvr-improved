@@ -2,9 +2,9 @@
   "name": "bhvr",
   "version": "0.4.0",
   "description": "A monorepo template built with Bun, Hono, Vite, and React",
-  "author": "Steve Simkins",
+  "author": "Daniel Yogel",
   "license": "MIT",
-  "homepage": "https://github.com/stevedylandev/bhvr",
+  "homepage": "https://github.com/danielyogel/bhvr-improved",
   "packageManager": "bun@1.2.4",
   "workspaces": [
     "./server",
