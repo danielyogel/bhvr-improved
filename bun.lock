@@ -14,10 +14,10 @@
       "version": "0.0.1",
       "dependencies": {
         "@orpc/client": "^1.7.4",
+        "@repo/server": "workspace:*",
         "@repo/shared": "workspace:*",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
-        "server": "workspace:*",
       },
       "devDependencies": {
         "@eslint/js": "^9.28.0",
@@ -46,7 +46,7 @@
       },
     },
     "server": {
-      "name": "server",
+      "name": "@repo/server",
       "version": "0.0.1",
       "dependencies": {
         "@orpc/server": "^1.7.4",
@@ -215,6 +215,8 @@
     "@orpc/standard-server-peer": ["@orpc/standard-server-peer@1.7.4", "", { "dependencies": { "@orpc/shared": "1.7.4", "@orpc/standard-server": "1.7.4" } }, "sha512-EVx4nm3HGq4072s4CadTtbv9c/Mf2NW3TL7o8tRqUMyrhBpF20mfRmw982s8S1iYBCC33ObUT5v+prhJ09pSpw=="],
 
     "@repo/config": ["@repo/config@workspace:packages/config"],
+
+    "@repo/server": ["@repo/server@workspace:server"],
 
     "@repo/shared": ["@repo/shared@workspace:packages/shared"],
 
@@ -527,8 +529,6 @@
     "scheduler": ["scheduler@0.26.0", "", {}, "sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA=="],
 
     "semver": ["semver@6.3.1", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="],
-
-    "server": ["server@workspace:server"],
 
     "shebang-command": ["shebang-command@2.0.0", "", { "dependencies": { "shebang-regex": "^3.0.0" } }, "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA=="],
 

@@ -2,7 +2,7 @@ import type { RouterClient } from '@orpc/server';
 import { createORPCClient, createSafeClient } from '@orpc/client';
 
 import { RPCLink } from '@orpc/client/fetch';
-import type { Router, InferRouterInputs, InferRouterOutputs } from 'server';
+import type { Router, InferRouterInputs, InferRouterOutputs } from '@repo/server';
 
 const link = new RPCLink({
   url: `${window.location.origin}/rpc`,

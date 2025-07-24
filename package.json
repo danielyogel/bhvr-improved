@@ -19,14 +19,14 @@
   "scripts": {
     "dev": "turbo dev",
     "dev:client": "turbo dev --filter=client",
-    "dev:server": "turbo dev --filter=server",
+    "dev:server": "turbo dev --filter=@repo/server",
     "build": "turbo build",
     "build:client": "turbo build --filter=client",
-    "build:server": "turbo build --filter=server",
+    "build:server": "turbo build --filter=@repo/server",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "test": "turbo test",
-    "postinstall": "turbo build --filter=@repo/shared --filter=server"
+    "postinstall": "turbo build --filter=@repo/shared --filter=@repo/server"
   },
   "keywords": [
     "bun",
