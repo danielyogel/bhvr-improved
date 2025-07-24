@@ -8,6 +8,7 @@
 
     // Output configuration
     "declaration": true,
+    "declarationMap": true,
     "outDir": "./dist",
     "noEmit": false,
 
