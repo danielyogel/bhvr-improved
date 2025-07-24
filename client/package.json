@@ -11,9 +11,10 @@
     "type-check": "tsc --build --noEmit --pretty"
   },
   "dependencies": {
+    "@orpc/client": "^1.7.4",
+    "@repo/shared": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "@repo/shared": "workspace:*",
     "server": "workspace:*"
   },
   "devDependencies": {

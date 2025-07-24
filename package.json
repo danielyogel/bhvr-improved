@@ -40,5 +40,11 @@
     "bun-types": "latest",
     "concurrently": "^9.2.0",
     "turbo": "^2.5.5"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "none",
+    "printWidth": 120
   }
 }

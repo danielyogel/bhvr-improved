@@ -1,21 +1,27 @@
-import { useState } from 'react'
-import beaver from './assets/beaver.svg'
-import type { ApiResponse } from '@repo/shared';
-import './App.css'
-
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000"
+import { useState } from 'react';
+import beaver from './assets/beaver.svg';
+import './App.css';
+import { client, RouterOutput } from './lib/orpcClient';
+import { isDefinedError } from '@orpc/client';
+import { assertNever } from '@repo/shared';
 
 function App() {
-  const [data, setData] = useState<ApiResponse | undefined>()
+  const [data, setData] = useState<RouterOutput['planet']['find'] | undefined>();
 
   async function sendRequest() {
-    try {
-      const req = await fetch(`${SERVER_URL}/hello`)
-      const res: ApiResponse = await req.json()
-      setData(res)
-    } catch (error) {
-      console.log(error)
+    const [error, data] = await client.planet.find({ id: 2 });
+
+    if (error) {
+      if (!isDefinedError(error)) return alert('An unexpected error occurred. Please check the console for details.');
+      switch (error.code) {
+        case 'NOT_FOUND':
+          return console.info(error);
+        default:
+          return assertNever(error.code);
+      }
     }
+
+    setData(data);
   }
 
   return (
@@ -29,23 +35,23 @@ function App() {
       <h2>Bun + Hono + Vite + React</h2>
       <p>A typesafe fullstack monorepo</p>
       <div className="card">
-        <div className='button-container'>
-          <button onClick={sendRequest}>
-            Call API
-          </button>
-          <a className='docs-link' target='_blank' href="https://bhvr.dev">Docs</a>
+        <div className="button-container">
+          <button onClick={sendRequest}>Call API</button>
+          <a className="docs-link" target="_blank" href="https://bhvr.dev">
+            Docs
+          </a>
         </div>
         {data && (
-          <pre className='response'>
+          <pre className="response">
             <code>
-            Message: {data.message} <br />
-            Success: {data.success.toString()}
+              Message: {data.id} <br />
+              Success: {data.name.toString()}
             </code>
           </pre>
         )}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

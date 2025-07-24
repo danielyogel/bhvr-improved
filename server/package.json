@@ -9,8 +9,10 @@
     "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
+    "@orpc/server": "^1.7.4",
+    "@repo/shared": "workspace:*",
     "hono": "^4.7.11",
-    "@repo/shared": "workspace:*"
+    "zod": "^4.0.8"
   },
   "devDependencies": {
     "typescript": "catalog:",
