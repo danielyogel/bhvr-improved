@@ -18,10 +18,10 @@
   },
   "scripts": {
     "dev": "turbo dev",
-    "dev:client": "turbo dev --filter=client",
+    "dev:client": "turbo dev --filter=@repo/client",
     "dev:server": "turbo dev --filter=@repo/server",
     "build": "turbo build",
-    "build:client": "turbo build --filter=client",
+    "build:client": "turbo build --filter=@repo/client",
     "build:server": "turbo build --filter=@repo/server",
     "lint": "turbo lint",
     "type-check": "turbo type-check",

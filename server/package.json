@@ -7,7 +7,7 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "bun build ./src/index.ts --outdir ./dist",
     "dev": "concurrently 'bun --watch --no-clear-screen run src/index.ts' 'tsc --watch --pretty' --names 'bun,tsc' --prefix-colors 'magenta,blue'",
     "type-check": "tsc --noEmit --pretty"
   },

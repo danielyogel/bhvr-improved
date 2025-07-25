@@ -6,16 +6,12 @@
     "target": "ESNext",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
 
     // Types
     "types": ["bun-types"],
 
     // Output settings
-    "declaration": true,
-    "outDir": "dist",
-    "noEmit": false,
-    "emitDecoratorMetadata": true,
+    "noEmit": true,
 
     // Module resolution
     "moduleResolution": "bundler",

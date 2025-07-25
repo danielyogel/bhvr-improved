@@ -4,7 +4,7 @@ import * as z from 'zod';
 const PlanetSchema = z.object({
   id: z.number().int().min(1),
   name: z.string(),
-  description: z.string().optional(),
+  description: z.string().optional()
 });
 
 export const listPlanet = os
@@ -27,6 +27,6 @@ export const findPlanet = os
 export const orpcRouter = {
   planet: {
     list: listPlanet,
-    find: findPlanet,
-  },
+    find: findPlanet
+  }
 };
