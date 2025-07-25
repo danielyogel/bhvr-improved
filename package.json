@@ -27,7 +27,7 @@
     "type-check": "turbo type-check",
     "test": "turbo test",
     "postinstall": "turbo build --filter=@repo/shared --filter=@repo/server",
-    "biome": "bunx biome check --write --verbose"
+    "biome": "bunx @biomejs/biome check --write --unsafe --verbose"
   },
   "keywords": [
     "bun",
@@ -38,8 +38,10 @@
     "turbo"
   ],
   "devDependencies": {
+    "@biomejs/biome": "2.1.2",
     "bun-types": "latest",
     "concurrently": "^9.2.0",
+    "lefthook": "^1.12.2",
     "turbo": "^2.5.5"
   }
 }
