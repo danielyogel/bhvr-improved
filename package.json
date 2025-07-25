@@ -26,7 +26,8 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "test": "turbo test",
-    "postinstall": "turbo build --filter=@repo/shared --filter=@repo/server"
+    "postinstall": "turbo build --filter=@repo/shared --filter=@repo/server",
+    "biome": "bunx biome check --write --verbose"
   },
   "keywords": [
     "bun",
@@ -40,11 +41,5 @@
     "bun-types": "latest",
     "concurrently": "^9.2.0",
     "turbo": "^2.5.5"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": true,
-    "trailingComma": "none",
-    "printWidth": 120
   }
 }

@@ -1,6 +1,8 @@
-import { Hono } from 'hono';
 import { RPCHandler } from '@orpc/server/fetch';
+import { Hono } from 'hono';
+
 export type { InferRouterInputs, InferRouterOutputs } from '@orpc/server';
+
 import { orpcRouter } from './router';
 
 const app = new Hono();

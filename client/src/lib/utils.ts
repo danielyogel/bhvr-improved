@@ -9,6 +9,7 @@ type Params<TError extends { code: string }> = {
 
 export function handleError<TError extends { code: string }>({ error, codes, defaultH }: Params<TError>) {
   if (!isDefinedError(error)) {
+    // biome-ignore lint/suspicious/noExplicitAny: ok
     return defaultH(error as any);
   }
 

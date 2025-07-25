@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import beaver from './assets/beaver.svg';
 import './App.css';
-import { client, RouterOutput } from './lib/orpcClient';
 import { isDefinedError } from '@orpc/client';
 import { assertNever } from '@repo/shared';
+import { client, type RouterOutput } from './lib/orpcClient';
 
 function App() {
   const [data, setData] = useState<RouterOutput['planet']['find'] | undefined>();
@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://github.com/stevedylandev/bhvr" target="_blank">
+        <a href="https://github.com/stevedylandev/bhvr" target="_blank" rel="noopener">
           <img src={beaver} className="logo" alt="beaver logo" />
         </a>
       </div>
@@ -36,8 +36,10 @@ function App() {
       <p>A typesafe fullstack monorepo</p>
       <div className="card">
         <div className="button-container">
-          <button onClick={sendRequest}>Call API</button>
-          <a className="docs-link" target="_blank" href="https://bhvr.dev">
+          <button type="button" onClick={sendRequest}>
+            Call API
+          </button>
+          <a className="docs-link" target="_blank" href="https://bhvr.dev" rel="noopener">
             Docs
           </a>
         </div>
